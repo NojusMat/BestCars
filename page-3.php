@@ -1,3 +1,15 @@
+<?php
+require_once('database.php');
+
+$select p.product_name as "Product Name", COUNT(op.product_id) as "Products sold"
+$from product p, customer_products op
+$where p.product_id = op.product_id
+$group by product_name
+$ORDER BY "Products sold" DESC;
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -23,5 +35,6 @@
 
 </main><!-- /.container -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <?php include 'includes/footer.php';?>
   </body>
 </html>
