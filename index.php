@@ -26,12 +26,46 @@ $statement->closeCursor($products);
     <link href="header.css" rel="stylesheet">
   </head>
   <body>
+
+  
   
   <?php include 'includes/header.php';?>
 
 <main class="container">
+<div class="starter-template text-center">
+    <h1>Top Products</h1>
+  </div>
+  <!-- Wrap the rest of the page in another container to center all the content. -->
 
-  <div class="starter-template text-center">
+  <div class="container marketing">
+
+<!-- Three columns of text below the carousel -->
+<div class="row">
+  <div class="col-lg-4">
+    <img class="rounded-circle" src="images/photo 1.jpg" alt="Generic placeholder image" width="200" height="200">
+    <h2>Best Seller</h2>
+    <p>Classic series Body: Basswood Arched top Set-in neck: Okoume Fretboard: Laurel Trapeze inlays Fretboard radius: 305 mm (12") Neck profile: C Cream bindings on body and neck 22 Medium jumbo frets Scale: 628 mm
+</p>
+    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+  </div><!-- /.col-lg-4 -->
+  <div class="col-lg-4">
+    <img class="rounded-circle" src="images/purple.jpg" alt="Generic placeholder image" width="200" height="200">
+    <h2>Most Recommended</h2>
+    <p>Vintage series Body: Mahogany (Entandrophragma cylindricum, Indonesian mahogany/sapele) Arched top made of AAA flamed maple Neck profile: C Fretboard radius: 305 mm (12") Scale: 628 mm Nut width: 43 mm
+
+    </p>
+    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+  </div><!-- /.col-lg-4 -->
+  <div class="col-lg-4">
+    <img class="rounded-circle" src="images/photo 6.jpg" alt="Generic placeholder image" width="200" height="200">
+    <h2>Our Coice</h2>
+    <p>Body: Mahogany Set-in neck: Mahogany Fingerboard: Macassar ebony Fingerboard inlays: Dots
+    Neck profile: Fat '59 Fingerboard radius: 305 mm Scale: 628 mm Nut width: 43 mm This guitar plays sick riffs</p>
+    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+  </div><!-- /.col-lg-4 -->
+</div><!-- /.row -->
+
+<div class="starter-template text-center">
     <h1>Our Products</h1>
   </div>
 
@@ -63,29 +97,6 @@ $statement->closeCursor($products);
             <?php endforeach; ?>
   </tbody>
 </table>
-    </section>
-    <div id="carouselExampleIndicators" class="carousel slide">
- 
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/photo 1.jpg" class="d-block w-10" alt="guitar1">
-    </div>
-    <div class="carousel-item">
-      <img src="images/photo 3.jpg" class="d-block w-10" alt="guitar2">
-    </div>
-    <div class="carousel-item">
-      <img src="images/photo 6.jpg" class="d-block w-10" alt="guitar3">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
 </main><!-- /.container -->
     <script src="js/bootstrap.bundle.min.js"></script>

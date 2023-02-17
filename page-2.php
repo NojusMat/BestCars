@@ -18,11 +18,9 @@ $statement->closeCursor($products);
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.80.0">
     <title>Starter Template · Bootstrap v5.0</title>
-    <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="mystyle.css" rel="stylesheet">
-  
+    <link href="header.css" rel="stylesheet">
   </head>
   <body>
     
@@ -30,9 +28,46 @@ $statement->closeCursor($products);
 
 <main class="container">
   <div class="starter-template text-center">
-    <h1>Our Services</h1>
-<p>Here are some of our most popular services that we provide!</p>
-
+<h5>Here are some of our most popular services that we provide!</h5>
+<div id="carouselExampleDark" class="carousel carousel-white slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="images/lighting.jpg" class="d-block w-100" alt="smol">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Soul Fest 2023</h5>
+        <p>Here is some lighting that we did for the amazing Soul Festival This year.</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="images/realstudio.jpg" class="d-block w-100" alt="studio">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/mic.jpg" class="d-block w-100" alt="lighting">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<h1>Our Services</h1>
     <section>
         <!-- display a table of products -->
         <table class="table table-hover table-dark">
