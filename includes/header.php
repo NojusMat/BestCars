@@ -50,6 +50,10 @@
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="page-3.php">Transactions</a>
               </li>
+
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="contact.php">Contact</a>
+              </li>
               
             </ul>       
           </span>
