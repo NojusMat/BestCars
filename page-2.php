@@ -2,11 +2,11 @@
 require_once('database.php');
 
 // Get products
-$queryProducts = 'SELECT * FROM services';
-$statement = $db->prepare($queryProducts);
+$queryServices = 'SELECT * FROM services';
+$statement = $db->prepare($queryServices);
 $statement->execute();
-$products = $statement->fetchAll();
-$statement->closeCursor($products);
+$services = $statement->fetchAll();
+$statement->closeCursor($services);
 
 ?>
 <!doctype html>
@@ -27,8 +27,8 @@ $statement->closeCursor($products);
   <?php include 'includes/header.php';?>
 
 <main class="container">
-  <div class="starter-template text-center">
-<h5>Here are some of our most popular services that we provide!</h5>
+  <div class="starter-template text-center ">
+<h4>Here are some of our most popular services that we provide!</h4>
 <div id="carouselExampleDark" class="carousel carousel-white slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -82,11 +82,11 @@ $statement->closeCursor($products);
   <tbody>
     <tr>
 
-    <?php foreach ($products as $product) : ?>
+    <?php foreach ($services as $service) : ?>
             <tr>
-                <td><?php echo $product['services_id']; ?></td>
-                <td><?php echo $product['service_name']; ?></td>
-                <td><?php echo $product['service_cost_per_day']; ?></td>
+                <td><?php echo $service['services_id']; ?></td>
+                <td><?php echo $service['service_name']; ?></td>
+                <td><?php echo $service['service_cost_per_day']; ?></td>
             </tr>
             <?php endforeach; ?>
   </tbody>

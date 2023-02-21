@@ -10,6 +10,8 @@
       }
     </style>
     
+
+    <link href="css/mystyle.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
@@ -24,7 +26,7 @@
 </button>
       <div class="container">
         
-        <a class="navbar-brand" href="index.php">StayInTune
+        <a class="navbar-brand text-white text-uppercase " href="index.php">StayInTune
           
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">

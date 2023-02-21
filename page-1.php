@@ -2,11 +2,11 @@
 require_once('database.php');
 
 // Get products
-$queryProducts = 'SELECT * FROM Customer';
-$statement = $db->prepare($queryProducts);
+$queryCustomers = 'SELECT * FROM Customer';
+$statement = $db->prepare($queryCustomers);
 $statement->execute();
-$products = $statement->fetchAll();
-$statement->closeCursor($products);
+$customers = $statement->fetchAll();
+$statement->closeCursor($customers);
 
 ?>
 
@@ -52,12 +52,12 @@ $statement->closeCursor($products);
   <tbody>
     <tr>
 
-    <?php foreach ($products as $product) : ?>
+    <?php foreach ($customers as $customer) : ?>
             <tr>
-                <td><?php echo $product['customer_id']; ?></td>
-                <td><?php echo $product['customer_name']; ?></td>
-                <td><?php echo $product['customer_telephone']; ?></td>
-                <td><?php echo $product['customer_address']; ?></td>
+                <td><?php echo $customer['customer_id']; ?></td>
+                <td><?php echo $customer['customer_name']; ?></td>
+                <td><?php echo $customer['customer_telephone']; ?></td>
+                <td><?php echo $customer['customer_address']; ?></td>
             </tr>
             <?php endforeach; ?>
   </tbody>

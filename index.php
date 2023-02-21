@@ -2,11 +2,11 @@
 require_once('database.php');
 
 // Get products
-$queryProducts = 'SELECT * FROM instrument';
-$statement = $db->prepare($queryProducts);
+$queryInstruments = 'SELECT * FROM instrument';
+$statement = $db->prepare($queryInstruments);
 $statement->execute();
-$products = $statement->fetchAll();
-$statement->closeCursor($products);
+$instruments = $statement->fetchAll();
+$statement->closeCursor($instruments);
 
 ?>
 
@@ -23,7 +23,8 @@ $statement->closeCursor($products);
     <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="header.css" rel="stylesheet">
+    <link href="css/mystyle.css" rel="stylesheet">
+    
   </head>
   <body>
 
@@ -42,26 +43,26 @@ $statement->closeCursor($products);
 <!-- Three columns of text below the carousel -->
 <div class="row">
   <div class="col-lg-4">
-    <img class="rounded-circle" src="images/photo 1.jpg" alt="Generic placeholder image" width="200" height="200">
+    <img class="img-fluid" src="images/photo 1.jpg" alt="Generic placeholder image" width="500" height="200">
     <h2>Best Seller</h2>
     <p>Classic series Body: Basswood Arched top Set-in neck: Okoume Fretboard: Laurel Trapeze inlays Fretboard radius: 305 mm (12") Neck profile: C Cream bindings on body and neck 22 Medium jumbo frets Scale: 628 mm
 </p>
-    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+    <p><a class="btn btn-secondary" href="#" role="button">View Product</a></p>
   </div><!-- /.col-lg-4 -->
   <div class="col-lg-4">
-    <img class="rounded-circle" src="images/purple.jpg" alt="Generic placeholder image" width="200" height="200">
+    <img class="img-fluid" src="images/purple.jpg" alt="Generic placeholder image" width="500" height="200">
     <h2>Most Recommended</h2>
     <p>Vintage series Body: Mahogany (Entandrophragma cylindricum, Indonesian mahogany/sapele) Arched top made of AAA flamed maple Neck profile: C Fretboard radius: 305 mm (12") Scale: 628 mm Nut width: 43 mm
 
     </p>
-    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+    <p><a class="btn btn-secondary" href="#" role="button">View Product</a></p>
   </div><!-- /.col-lg-4 -->
   <div class="col-lg-4">
-    <img class="rounded-circle" src="images/photo 6.jpg" alt="Generic placeholder image" width="200" height="200">
-    <h2>Our Coice</h2>
+    <img class="img-fluid " src="images/photo 6.jpg" alt="Generic placeholder image" width="500" height="200">
+    <h2 class="text-center ">Our Coice</h2>
     <p>Body: Mahogany Set-in neck: Mahogany Fingerboard: Macassar ebony Fingerboard inlays: Dots
     Neck profile: Fat '59 Fingerboard radius: 305 mm Scale: 628 mm Nut width: 43 mm This guitar plays sick riffs</p>
-    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+    <p><a class="btn btn-secondary" href="#" role="button">View Product</a></p>
   </div><!-- /.col-lg-4 -->
 </div><!-- /.row -->
 
@@ -87,12 +88,12 @@ $statement->closeCursor($products);
   <tbody>
     <tr>
 
-    <?php foreach ($products as $product) : ?>
+    <?php foreach ($instruments as $instrument) : ?>
             <tr>
-                <td><?php echo $product['instrument_id']; ?></td>
-                <td><?php echo $product['instrument_name']; ?></td>
-                <td><?php echo $product['unit_price']; ?></td>
-                <td><?php echo $product['instrument_description']; ?></td>
+                <td><?php echo $instrument['instrument_id']; ?></td>
+                <td><?php echo $instrument['instrument_name']; ?></td>
+                <td><?php echo $instrument['unit_price']; ?></td>
+                <td><?php echo $instrument['instrument_description']; ?></td>
             </tr>
             <?php endforeach; ?>
   </tbody>
