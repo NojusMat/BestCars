@@ -32,15 +32,14 @@ $statement->closeCursor($products);
   <?php include 'includes/header.php';?>
 
 <main class="container">
-<div class="starter-template text-center">
-    <h1>Contact</h1>
-  </div>
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
-<div id="datatable">
+<div  id="datatable">
+</div>
+<div class="starter-template text-center">
+<h1>Contact us</h1>
 </div>
 
-<h1>Contact us</h1>
 <form method="POST" name="contactform" action="contact-form-handler.php"> 
 <p>
 <label for='name'>Your Name:</label> <br>
@@ -58,22 +57,20 @@ $statement->closeCursor($products);
 </div>
 <br>
 
-<p>
-<label for='address'>Address:</label> <br>
-<input type="text"  class="form-control"name="address"> 
-<div id="addressHelp" class="form-text">We'll never share your Address with anyone else.</div>
-</p>
-<br>
+<label for="datePicker">Pick a date:</label>
+  <input type="date" class="form-control" id="datePicker" name="datePicker">
+  <div id="dateHelp" class="form-text">Enter the date you completed your purchase.</div>
+  <br>
 
 <label for='ecode'>Eire Code:</label> <br>
 <input type="text" class="form-control" name="ecode"> 
-<div id="addressHelp" class="form-text">Please enter your eire code in the following format A12 B123</div>
+<div id="ecodeHelp" class="form-text">Please enter your eire code in the following format A12 B123</div>
 </p>
 <br>
 
 <label for='city'>City:</label> <br>
 <input type="text" class="form-control" name="city"> 
-<div id="addressHelp" class="form-text">Please enter your City</div>
+<div id="cityHelp" class="form-text">Please enter your City</div>
 </p>
 <br>
 
@@ -95,7 +92,6 @@ $statement->closeCursor($products);
   </select>
   <div id="regionHelp" class="form-text">Please select a region above</div>
 <p>
-
 <br>
 
 <label for="phone">Enter a phone number:</label><br>
@@ -103,10 +99,29 @@ $statement->closeCursor($products);
 <div id="telephoneHelp" class="form-text">Enter the phone number in the following format 123-456-7890</div>
 <br>
 
+<!-- <label for="radio">Would you recommend us to a friend?:</label><br>
+  <input type="radio" id="radio" name="fav_language" value="radioDeffinatly">
+  <label for="radioDeffinatly">Deffinatly</label><br>
+  <input type="radio" id="radio" name="fav_language" value="radioMaybe">
+  <label for="radioMaybe">Maybe</label><br>
+  <input type="radio" id="radio" name="fav_language" value="radioNot">
+  <label for="radioNot">Probably not</label>
+<br> -->
+<!-- 
+<br><label for="satisfaction" class="form-label">How Satisfied Where you with our service</label>
+<input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3"> -->
 
-<label for="satisfaction" class="form-label">How Satisfied Where you with our service</label>
-<input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+<br>
+<!-- <br><label for="satisfaction" class="form-label">What did you purchase?</label><br>
+<input type="checkbox" id="choice" name="choice1" value="Instrument">
+  <label for="choice1"> Instrument</label><br>
+  <input type="checkbox" id="choice" name="choice2" value="Service">
+  <label for="choice2"> Service</label><br>
+  <input type="checkbox" id="choice" name="choice3" value="Both">
+  <label for="choice3"> Both</label><br><br>
 
+
+<br> -->
 
 <label for='message'>Message:</label> 
 <textarea name="message" class="form-control"></textarea>

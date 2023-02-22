@@ -1,14 +1,14 @@
 <?php
 require_once('database.php');
 
-$select p.product_name as "Product Name", COUNT(op.product_id) as "Products sold"
-$from product p, customer_products op
-$where p.product_id = op.product_id
-$group by product_name
-$ORDER BY "Products sold" DESC;
+// Get products
+$queryCustomers = 'SELECT * FROM `service_customer`;';
+$statement = $db->prepare($queryCustomers);
+$statement->execute();
+$customers = $statement->fetchAll();
+$statement->closeCursor($customers);
 
 ?>
-
 
 <!doctype html>
 <html lang="en">
@@ -29,9 +29,39 @@ $ORDER BY "Products sold" DESC;
   
 <main class="container">
   <div class="starter-template text-center">
-    <h1>Page 3</h1>
+    <h1>Transactions</h1>
     <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
   </div>
+
+
+   <section>
+        <!-- display a table of products -->
+
+
+        <table class="table table-hover table-dark">
+  <thead>
+    <tr>
+                <th>Customer ID</th>
+                <th>Service ID</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+
+    <?php foreach ($customers as $customer) : ?>
+            <tr>
+                <td><?php echo $customer['customer_id']; ?></td>
+                <td><?php echo $customer['services_id']; ?></td>
+                <td><?php echo $customer['date_started']; ?></td>
+                <td><?php echo $customer['date_ended']; ?></td>
+            </tr>
+            <?php endforeach; ?>
+  </tbody>
+</table>
+
+    </section>
 
 </main><!-- /.container -->
     <script src="js/bootstrap.bundle.min.js"></script>

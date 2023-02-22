@@ -46,15 +46,15 @@ $statement->closeCursor($services);
     <div class="carousel-item" data-bs-interval="2000">
       <img src="images/realstudio.jpg" class="d-block w-100" alt="studio">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5>Our Music Studio</h5>
+        <p>Here is a picture of our state of the art music studio.</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="images/mic.jpg" class="d-block w-100" alt="lighting">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <h5>Microphone Set up</h5>
+        <p>Here we have set up some microphones in a studio for one of our many happy clients.</p>
       </div>
     </div>
   </div>
