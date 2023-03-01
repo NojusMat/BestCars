@@ -40,7 +40,7 @@ $statement->closeCursor($instruments);
   </div><!-- /.col-lg-4 -->
   <div class="col-lg-4">
     <img class="img-fluid " src="images/photo 6.jpg" alt="Generic placeholder image" width="500" height="200">
-    <h2 class="text-center ">Our Coice</h2>
+    <h2 class="text-center ">Our Choice</h2>
     <p>Body: Mahogany Set-in neck: Mahogany Fingerboard: Macassar ebony Fingerboard inlays: Dots
     Neck profile: Fat '59 Fingerboard radius: 305 mm Scale: 628 mm Nut width: 43 mm This guitar plays sick riffs</p>
     <p><a class="btn btn-secondary" href="#" role="button">View Product</a></p>

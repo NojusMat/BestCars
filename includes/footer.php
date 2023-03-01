@@ -123,6 +123,7 @@
       <!-- Section: Copyright -->
     </div>
     <!-- Grid container -->
+    <script src="js/validation.js"></script>
   </footer>
   <!-- Footer -->
 </div>

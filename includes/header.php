@@ -26,24 +26,25 @@
   <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
     <span class="visually-hidden">New alerts</span>
   </span>
-
-  
-  
 </button>
+
+<a class="Title " href="index.php">StayInTune
+          
+  
       <div class="container">
         
-        <a class="navbar-brand text-white text-uppercase " href="index.php">StayInTune
-          
+        
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           
         </button>
-        
       </div>
 
       <input type="search" class="form-control" placeholder="Search..." aria-label="Search" data-dashlane-rid="8d33cbb24b48e9e7" data-form-type="">
+      
         <div class="collapse navbar-collapse" id="navbarsExample07">
+      
           
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           </ul>

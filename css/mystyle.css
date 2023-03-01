@@ -1,3 +1,13 @@
-a{
-    color: red;
+a.Title{
+    color: white;
+    text-decoration: none;
+    font-size:50px;
+    padding-left:2%;
+    float:left;
+
+}
+
+input.form-control
+{
+    width:22000px;
 }

@@ -1,14 +1,3 @@
-<?php
-require_once('database.php');
-
-// Get products
-$queryProducts = 'SELECT * FROM instrument';
-$statement = $db->prepare($queryProducts);
-$statement->execute();
-$products = $statement->fetchAll();
-$statement->closeCursor($products);
-
-?>
 
 
 <!doctype html>
@@ -42,16 +31,20 @@ $statement->closeCursor($products);
 
 <form method="POST" name="contactform" action="contact-form-handler.php"> 
 <p>
+
+<label for="userid">User ID:</label><br>
+<input type="text"class="form-control"  name="userid" id="userid" size="12" onBlur="userid_validation();"/><span id="uid_err"></span></li>
+<div id="nameHelp" class="form-text">Please enter your user ID.</div>
+<br>
 <label for='name'>Your Name:</label> <br>
-<input type="text" class="form-control" name="name">
+<input type="text"class="form-control"  name="name" id="name" size="12" onBlur="name_validation();"/><span id="name_err"></span></li>
 <div id="nameHelp" class="form-text">Please enter your full name.</div>
 </p>
-<br>
-
 <p>
 <div class="mb-3">
+
 <label for="email" class="form-label">Email address</label><br>
-<input type="text" class="form-control" name="email" > 
+<input type="text"class="form-control" name="email" id="email" size="50" onBlur="email_validation();"/><span id="email_err"></span></li>
 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
 </p>
 </div>
@@ -62,11 +55,12 @@ $statement->closeCursor($products);
   <div id="dateHelp" class="form-text">Enter the date you completed your purchase.</div>
   <br>
 
-<label for='ecode'>Eire Code:</label> <br>
-<input type="text" class="form-control" name="ecode"> 
-<div id="ecodeHelp" class="form-text">Please enter your eire code in the following format A12 B123</div>
-</p>
+
+<label for="zip">EirCode:</label>
+<input type="text" class="form-control" name="zip" id="zip" onBlur="zip_validation();" /><span id="zip_err"></span></li>
+<div id="regionHelp" class="form-text">Enter your zip code </div>
 <br>
+
 
 <label for='city'>City:</label> <br>
 <input type="text" class="form-control" name="city"> 
@@ -77,6 +71,7 @@ $statement->closeCursor($products);
 <label for="region">Choose a region:</label>
 <br>
   <select id="region"  class="form-control" name="region">
+  <option value="Cork">None</option>
     <option value="Cork">Cork</option>
     <option value="Galway">Galway</option>
     <option value="Mayo">Mayo</option>
@@ -89,7 +84,8 @@ $statement->closeCursor($products);
     <option value="Cavan">Cavan</option>
     <option value="Dublin">Dublin</option>
     <option value="Other">Other</option>
-  </select>
+    </select><span id="region_err"></span>
+
   <div id="regionHelp" class="form-text">Please select a region above</div>
 <p>
 <br>
@@ -99,14 +95,14 @@ $statement->closeCursor($products);
 <div id="telephoneHelp" class="form-text">Enter the phone number in the following format 123-456-7890</div>
 <br>
 
-<!-- <label for="radio">Would you recommend us to a friend?:</label><br>
-  <input type="radio" id="radio" name="fav_language" value="radioDeffinatly">
-  <label for="radioDeffinatly">Deffinatly</label><br>
-  <input type="radio" id="radio" name="fav_language" value="radioMaybe">
-  <label for="radioMaybe">Maybe</label><br>
-  <input type="radio" id="radio" name="fav_language" value="radioNot">
-  <label for="radioNot">Probably not</label>
-<br> -->
+<li><label id="recommendation">Where did you hear about us:</label></li>
+<li><input type="radio" name="ROnline" id="ROnline" value="Online"  onBlur="recommendation_validation();" /><span>Online</span></li>
+<li><input type="radio" name="RAds" id="RAds" value="Ads"   onBlur="recommendation_validation();"/><span>Ads</span></span></li>
+<li><input type="radio" name="RWordOfMouth" id="RWordOfMouth" value="WordOfMouth" onBlur="recommendation_validation();"/><span>Word Of Mouth</span><br><span id="recommendation_err"></li>
+
+
+
+
 <!-- 
 <br><label for="satisfaction" class="form-label">How Satisfied Where you with our service</label>
 <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3"> -->
@@ -149,4 +145,6 @@ $statement->closeCursor($products);
     <script src="js/bootstrap.bundle.min.js"></script>
     <?php include 'includes/footer.php';?>
   </body>
+
+
 </html>
