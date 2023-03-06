@@ -10,6 +10,28 @@ $statement->closeCursor($instruments);
 
 ?>
 
+<?php
+$searchErr = '';
+$instrument='';
+if(isset($_POST['save']))
+{
+    if(!empty($_POST['search']))
+    {
+        $search = $_POST['search'];
+        $stmt = $con->prepare("select * from instrument where instrument_id like '%$search%' or instrument_name like '%$search%'or unit_price like '%$search%'or instrument_description like '%$search%'");
+        $stmt->execute();
+        $instrument = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        //print_r($employee_details);
+         
+    }
+    else
+    {
+        $searchErr = "Please enter the information";
+    }
+    
+}
+?>
+
   
   <?php include 'includes/header.php';?>
 
@@ -67,6 +89,47 @@ $statement->closeCursor($instruments);
     </tr>
   </thead>
   <tbody>
+
+  <?php
+
+$con = new PDO("mysql:host=localhost;dbname=year2ca2",'root','');
+
+if (isset($_POST["submit"])) {
+	$str = $_POST["search"];
+	$sth = $con->prepare("SELECT * FROM `search` WHERE instrument_name = '$str'");
+
+	$sth->setFetchMode(PDO:: FETCH_OBJ);
+	$sth -> execute();
+
+	if($row = $sth->fetch())
+	{
+		?>
+		<br><br><br>
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>NAME</th>
+        <th>PRICE</th>
+        <th>Description</th>
+			</tr>
+			<tr>
+				<td><?php echo $row->instrument_id; ?></td>
+				<td><?php echo $row->instrument_name;?></td>
+        <td><?php echo $row->unit_price;?></td>
+        <td><?php echo $row->instrument_description;?></td>
+			</tr>
+
+		</table>
+<?php 
+	}
+		else{
+			echo "Item does not exist";
+		}
+}
+
+?>
+
+
     <tr>
 
     <?php foreach ($instruments as $instrument) : ?>

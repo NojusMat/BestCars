@@ -20,7 +20,10 @@
   
   <?php include 'includes/header.php';?>
 
-<main class="container">
+<main >
+
+<div class="container">
+<div class="form-group row">
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
 <div  id="datatable">
@@ -29,22 +32,24 @@
 <h1>Contact us</h1>
 </div>
 
-<form method="POST" name="contactform" action="contact-form-handler.php"> 
+<form method="POST" class="form-control" name="contactform" action="contact-form-handler.php"> 
+  
 <p>
-
+<div class="form-group row">
 <label for="userid">User ID:</label><br>
-<input type="text"class="form-control"  name="userid" id="userid" size="12" onBlur="userid_validation();"/><span id="uid_err"></span></li>
+<input type="text"class= "form-control" name="userid" id="userid" size="12" onBlur="userid_validation();"/><span id="uid_err"></span></li>
 <div id="nameHelp" class="form-text">Please enter your user ID.</div>
 <br>
+
+<div class="form-group row">
 <label for='name'>Your Name:</label> <br>
 <input type="text"class="form-control"  name="name" id="name" size="12" onBlur="name_validation();"/><span id="name_err"></span></li>
 <div id="nameHelp" class="form-text">Please enter your full name.</div>
 </p>
 <p>
-<div class="mb-3">
-
+<div class="form-group row">
 <label for="email" class="form-label">Email address</label><br>
-<input type="text"class="form-control" name="email" id="email" size="50" onBlur="email_validation();"/><span id="email_err"></span></li>
+<input type="text"class="form-control" name="email" id="email" size="12" onBlur="email_validation();"/><span id="email_err"></span></li>
 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
 </p>
 </div>
@@ -91,7 +96,7 @@
 <br>
 
 <label for="phone">Enter a phone number:</label><br>
-<input type="tel"  class="form-control"id="phone" name="phone" placeholder="086-111-2233" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+<input type="tel"  id="phone" name="phone" placeholder="086-111-2233" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
 <div id="telephoneHelp" class="form-text">Enter the phone number in the following format 123-456-7890</div>
 <br>
 
@@ -127,7 +132,7 @@
 <input type="submit" class="btn btn-primary btn-lg btn-block" value="Submit"><br>
 </form>
 
-  <section>
+  <section></section>
         <!-- display a table of products -->
         <table class="table table-hover table-dark">
 

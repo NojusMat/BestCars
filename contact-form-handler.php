@@ -29,7 +29,7 @@ $headers .= 'From: '.$myemail."\r\n".
 $userid = $_POST['userid'];
 $name = $_POST['name'];
 $email_address = $_POST['email'];
-$ecode = $_POST['ecode'];
+$ecode = $_POST['zip'];
 $phone = $_POST['phone'];
 $city = $_POST['city'];
 $region = $_POST['region'];
@@ -51,7 +51,7 @@ if( empty($errors))
         $to = $myemail;
         $email_subject = "Contact form submission: $name";
         $email_body = "You have received a new message. ".
-        " Here are the details:\nUsername :$userid\n Name: $name \n Email: $email_address\n ecode:$ecode \n Phone:$phone\n city:$city\n region:$region\ndatePicker: $datePicker\\n Message \n $message";
+        " Here are the details:\nUsername :$userid\n Name: $name \n Email: $email_address\n zip:$ecode \n Phone:$phone\n city:$city\n region:$region\ndatePicker: $datePicker\\n Message \n $message";
 
         mail($to,$email_subject,$email_body,$headers);
         //redirect to the 'thank you' page

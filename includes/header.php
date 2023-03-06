@@ -1,5 +1,6 @@
 
 
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -15,9 +16,9 @@
     <link href="css/mystyle.css" rel="stylesheet">
       
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     
   </head>
+
   <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
@@ -27,6 +28,8 @@
     <span class="visually-hidden">New alerts</span>
   </span>
 </button>
+
+
 
 <a class="Title " href="index.php">StayInTune
           
@@ -39,10 +42,18 @@
           <span class="navbar-toggler-icon"></span>
           
         </button>
+        
+<div classname ="searchbar">
+<form method="post">
+<input type="text" type="search" placeholder="Search" name ="search">
+<input class=" btn-primary" type="submit" name="submit">
+	
+
+</div>
+
+</form>
       </div>
 
-      <input type="search" class="form-control" placeholder="Search..." aria-label="Search" data-dashlane-rid="8d33cbb24b48e9e7" data-form-type="">
-      
         <div class="collapse navbar-collapse" id="navbarsExample07">
       
           
@@ -81,6 +92,7 @@
         <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
           <ul class="navbar-nav">
             <li class="nav-item">
+              
              
               <h4 class="text-white ">Voted The Best Music Shop In Ireland 2023</h4>
               
@@ -91,3 +103,4 @@
         </div>
       </div>
     </nav>
+    </html>

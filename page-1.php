@@ -52,7 +52,9 @@ $statement->closeCursor($customers);
   <tbody>
     <tr>
 
-    <?php foreach ($customers as $customer) : ?>
+    <?php 
+    
+    foreach ($customers as $customer) : ?>
             <tr>
                 <td><?php echo $customer['customer_id']; ?></td>
                 <td><?php echo $customer['customer_name']; ?></td>

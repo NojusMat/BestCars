@@ -43,9 +43,9 @@ function userid_validation(){
     var name_value = document.getElementById("name").value;
     var name_length = name_value.length;
     var letters = /^[a-zA-Z]+$/;
-    if(name_length < 1 || !name_value.match(letters))
+    if(name_length < 3 || !name_value.match(letters))
     {
-    document.getElementById('name_err').innerHTML = 'Name must be longer than 1 character and contain only letters';
+    document.getElementById('name_err').innerHTML = 'Name must be longer than 3 character and contain only letters';
     name_name.focus();
     document.getElementById('name_err').style.color = "#FF0000";
     }
