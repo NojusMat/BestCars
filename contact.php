@@ -10,7 +10,7 @@
     <meta name="generator" content="Hugo 0.80.0">
     <title>Starter Template · Bootstrap v5.0</title>
     <!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="header.css" rel="stylesheet">
   </head>
@@ -54,18 +54,19 @@
 </p>
 </div>
 <br>
-
+<br>
+<br>
 <label for="datePicker">Pick a date:</label>
   <input type="date" class="form-control" id="datePicker" name="datePicker">
   <div id="dateHelp" class="form-text">Enter the date you completed your purchase.</div>
   <br>
 
-
+  <br>
 <label for="zip">EirCode:</label>
 <input type="text" class="form-control" name="zip" id="zip" onBlur="zip_validation();" /><span id="zip_err"></span></li>
 <div id="regionHelp" class="form-text">Enter your zip code </div>
 <br>
-
+<br>
 
 <label for='city'>City:</label> <br>
 <input type="text" class="form-control" name="city"> 
@@ -96,10 +97,11 @@
 <br>
 
 <label for="phone">Enter a phone number:</label><br>
-<input type="tel"  id="phone" name="phone" placeholder="086-111-2233" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-<div id="telephoneHelp" class="form-text">Enter the phone number in the following format 123-456-7890</div>
-<br>
 
+<input type="tel"  id="phone" name="phone" placeholder="086 111 2233" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+<div id="telephoneHelp" class="form-text">Enter the phone number in the format above</div>
+<br>
+<br>
 <li><label id="recommendation">Where did you hear about us:</label></li>
 <li><input type="radio" name="ROnline" id="ROnline" value="Online"  onBlur="recommendation_validation();" /><span>Online</span></li>
 <li><input type="radio" name="RAds" id="RAds" value="Ads"   onBlur="recommendation_validation();"/><span>Ads</span></span></li>
@@ -123,7 +125,7 @@
 
 
 <br> -->
-
+<br>
 <label for='message'>Message:</label> 
 <textarea name="message" class="form-control"></textarea>
 </p>

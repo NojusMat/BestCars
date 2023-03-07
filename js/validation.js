@@ -17,25 +17,6 @@ function userid_validation(){
     }
     }
     //user id validation ends
-    //password validation starts
-    function passwd_validation(){
-    'use strict';
-    var passid_name = document.getElementById("passid");
-    var passid_value = document.getElementById("passid").value;
-    var passid_length = passid_value.length;
-    if(passid_length<6)
-    {
-    document.getElementById('passwd_err').innerHTML = 'Password must be at least 6 chracters long';
-    passid_name.focus();
-    document.getElementById('passwd_err').style.color = "#FF0000";
-    }
-    else
-    {
-    document.getElementById('passwd_err').innerHTML = 'Valid password';
-    document.getElementById('passwd_err').style.color = "#00AF33";
-    }
-    }
-    //password validation ends
     //user name validation starts
     function name_validation(){
     'use strict';
@@ -152,21 +133,21 @@ function userid_validation(){
     }
     //recommendation   validation ends
            //Phone validation starts
-           function zip_validation(){
+           function phone_validation(){
             'use strict';
-            var numbers = /^[0-9]+$/;
-            var zip_name = document.getElementById("zip");
-            var zip_value = document.getElementById("zip").value;
-            var zip_length = zip_value.length;
-            if(!zip_value.match(numbers) || zip_length !== 5)
+            var numbers = /^^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$+$/;
+            var phone_name = document.getElementById("phone");
+            var phone_value = document.getElementById("phone").value;
+            var phone_length = phone_value.length;
+            if(!phone_value.match(numbers) || phone_length !== 10)
             {
-            document.getElementById('zip_err').innerHTML = 'You must enter a ZIP code, which must be numeric and must be at least 5 chracters long.';
-            zip_name.focus();
-            document.getElementById('zip_err').style.color = "#FF0000";
+            document.getElementById('phone_err').innerHTML = 'You must enter a valid phone number.';
+            phone_name.focus();
+            document.getElementById('phone_err').style.color = "#FF0000";
             }
             else
             {
-            document.getElementById('zip_err').innerHTML = 'ZIP code entered';
-            document.getElementById('zip_err').style.color = "#00AF33";
+            document.getElementById('phone_err').innerHTML = 'Phone Number entered';
+            document.getElementById('phone_err').style.color = "#00AF33";
             }
             }
