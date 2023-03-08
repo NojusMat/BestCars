@@ -132,22 +132,3 @@ function userid_validation(){
     }
     }
     //recommendation   validation ends
-           //Phone validation starts
-           function phone_validation(){
-            'use strict';
-            var numbers = /^^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$+$/;
-            var phone_name = document.getElementById("phone");
-            var phone_value = document.getElementById("phone").value;
-            var phone_length = phone_value.length;
-            if(!phone_value.match(numbers) || phone_length !== 10)
-            {
-            document.getElementById('phone_err').innerHTML = 'You must enter a valid phone number.';
-            phone_name.focus();
-            document.getElementById('phone_err').style.color = "#FF0000";
-            }
-            else
-            {
-            document.getElementById('phone_err').innerHTML = 'Phone Number entered';
-            document.getElementById('phone_err').style.color = "#00AF33";
-            }
-            }

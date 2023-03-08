@@ -98,7 +98,7 @@
 
 <label for="phone">Enter a phone number:</label><br>
 
-<input type="tel"  id="phone" name="phone" placeholder="086 111 2233" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+<input type="tel"  id="phone" name="phone" placeholder="086 111 2233" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
 <div id="telephoneHelp" class="form-text">Enter the phone number in the format above</div>
 <br>
 <br>
@@ -150,6 +150,7 @@
 
 </main><!-- /.container -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/validation.js"></script>
     <?php include 'includes/footer.php';?>
   </body>
 
