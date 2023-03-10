@@ -1,5 +1,4 @@
 
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -122,8 +121,6 @@
   <label for="choice2"> Service</label><br>
   <input type="checkbox" id="choice" name="choice3" value="Both">
   <label for="choice3"> Both</label><br><br>
-
-
 <br> -->
 <br>
 <label for='message'>Message:</label> 
