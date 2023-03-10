@@ -10,6 +10,7 @@ if(
    empty($_POST['phone']) ||
    empty($_POST['city']) ||
    empty($_POST['region']) ||
+   empty($_POST['ROnline']) ||
 //    empty($_POST['satisfaction']) ||
    empty($_POST['datePicker']) ||
 //    empty($_POST['radio']) ||
@@ -33,7 +34,6 @@ $zip = $_POST['zip'];
 $phone = $_POST['phone'];
 $city = $_POST['city'];
 $region = $_POST['region'];
-$recommendation = $_POST['recommendation'];
 $datePicker = $_POST['datePicker'];
 // $radio = $_POST['radio'];
 // $choice = $_POST['choice'];
@@ -51,7 +51,7 @@ if( empty($errors))
         $to = $myemail;
         $email_subject = "Contact form submission: $name";
         $email_body = "You have received a new message. ".
-        " Here are the details:\nUsername :$userid\n Name: $name \n Email: $email\nZip:$zip \n Phone:$phone\n City:$city\n Region:$region\nDate: $datePicker\nRecommendation:$recommendation\n Message $message";
+        " Here are the details:\nUsername :$userid\n Name: $name \n Email: $email\nZip:$zip \n Phone:$phone\n City:$city\n Region:$region\nDate: $datePicker\n Message $message";
 
         mail($to,$email_subject,$email_body,$headers);
         //redirect to the 'thank you' page
